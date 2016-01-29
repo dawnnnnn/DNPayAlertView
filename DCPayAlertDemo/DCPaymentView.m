@@ -167,7 +167,7 @@
         if (_completeHandle) {
             _completeHandle(totalString);
         }
-        [self performSelector:@selector(dismiss) withObject:nil afterDelay:.5f];
+        [self performSelector:@selector(dismiss) withObject:nil afterDelay:.3f];
     NSLog(@"complete");
     }
     
