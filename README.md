@@ -19,3 +19,6 @@ A payment alertview that imitating Wechat with six digital pay passwords.
     };
 ```
     
+    
+# License  
+MIT
