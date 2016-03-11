@@ -1,8 +1,9 @@
 # DCPaymentAlert
-A payment alertview that imitating Wechat with six digital pay passwords.
+A payment alertview that imitating Wechat with six digital pay passwords.<br/>
 一款模仿微信的6位数字支付密码弹框。
-
-
+<br/>
+### [同款Swift版点击此处](https://github.com/dawnnnnn/DCPayAlertView-Swift)
+<br/>
 # Preview 预览
 ![screenshots](https://raw.githubusercontent.com/dawnnnnn/DCPayAlertView/master/screenshots/DCPaymentDemo.gif)
 

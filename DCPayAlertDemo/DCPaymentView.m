@@ -7,7 +7,6 @@
 //
 
 #import "DCPaymentView.h"
-#import "DCPwdTextField.h"
 
 #define TITLE_HEIGHT 46
 #define PAYMENT_WIDTH [UIScreen mainScreen].bounds.size.width-80
@@ -103,7 +102,7 @@
             [_inputView addSubview:dot];
             [pwdIndicatorArr addObject:dot];
             
-            if (i == PWD_COUNT-1) {
+                if (i == PWD_COUNT-1) {
                 continue;
             }
             UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake((i+1)*width, 0, .5f, _inputView.bounds.size.height)];
@@ -168,7 +167,7 @@
             _completeHandle(totalString);
         }
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:.3f];
-    NSLog(@"complete");
+        NSLog(@"complete");
     }
     
     return YES;
