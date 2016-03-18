@@ -20,6 +20,8 @@ A payment alertview that imitating Wechat with six digital pay passwords.<br/>
     };
 ```
     
+### Update 更新
+2016/03/18 : 将控件类型继承于UIViewController来解决iOS7上与UIAlertView显示时的Window冲突。
     
 # License  
 MIT

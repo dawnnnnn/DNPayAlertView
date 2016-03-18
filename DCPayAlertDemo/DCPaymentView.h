@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCPaymentView : UIView
+@interface DCPaymentView : UIViewController
 
-@property (nonatomic, copy) NSString *title, *detail;
+@property (nonatomic, copy) NSString *titleStr, *detail;
 @property (nonatomic, assign) CGFloat amount;
 
 @property (nonatomic,copy) void (^completeHandle)(NSString *inputPwd);

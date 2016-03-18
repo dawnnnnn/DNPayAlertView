@@ -25,6 +25,7 @@
 @property (nonatomic, strong) UIButton *closeBtn;
 @property (nonatomic, strong) UILabel *titleLabel, *line, *detailLabel, *amountLabel;
 @property (nonatomic, strong) UITextField *pwdTextField;
+@property (nonatomic, strong) UIWindow *showWindow;
 
 @end
 
@@ -33,8 +34,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.frame = [UIScreen mainScreen].bounds;
-        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3f];
+        self.view.frame = [UIScreen mainScreen].bounds;
+        self.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3f];
         
         [self drawView];
     }
@@ -47,7 +48,7 @@
         _paymentAlert.layer.cornerRadius = 5.f;
         _paymentAlert.layer.masksToBounds = YES;
         _paymentAlert.backgroundColor = [UIColor colorWithWhite:1. alpha:.95];
-        [self addSubview:_paymentAlert];
+        [self.view addSubview:_paymentAlert];
         
         _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, PAYMENT_WIDTH, TITLE_HEIGHT)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -86,7 +87,7 @@
         [_paymentAlert addSubview:_inputView];
         
         pwdIndicatorArr = [[NSMutableArray alloc]init];
-        _pwdTextField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        _pwdTextField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         _pwdTextField.hidden = YES;
         _pwdTextField.delegate = self;
         _pwdTextField.keyboardType = UIKeyboardTypeNumberPad;
@@ -116,13 +117,17 @@
 
 
 - (void)show {
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    [keyWindow addSubview:self];
+//    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+//    [keyWindow addSubview:self];
+    UIWindow *newWindow = [[UIWindow alloc]initWithFrame:self.view.bounds];
+//    newWindow.backgroundColor = [UIColor clearColor];
+    newWindow.rootViewController = self;
+    [newWindow makeKeyAndVisible];
+    self.showWindow = newWindow;
     
     _paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
     _paymentAlert.alpha = 0;
 
-    
     [UIView animateWithDuration:.7f delay:0.f usingSpringWithDamping:.7f initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [_pwdTextField becomeFirstResponder];
         _paymentAlert.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
@@ -135,9 +140,12 @@
     [UIView animateWithDuration:0.3f animations:^{
         _paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
         _paymentAlert.alpha = 0;
-        self.alpha = 0;
+        self.showWindow.alpha = 0;
     } completion:^(BOOL finished) {
-            [self removeFromSuperview];
+//            [self removeFromSuperview];
+        [self.showWindow removeFromSuperview];
+        [self.showWindow resignKeyWindow];
+        self.showWindow = nil;
     }];
 }
 
@@ -184,25 +192,19 @@
 }
 
 #pragma mark - 
-- (void)setTitle:(NSString *)title {
-    if (_title != title) {
-        _title = title;
-        _titleLabel.text = _title;
-    }
+- (void)setTitleStr:(NSString *)titleStr {
+    _titleStr = titleStr;
+    _titleLabel.text = _titleStr;
 }
 
 - (void)setDetail:(NSString *)detail {
-    if (_detail != detail) {
-        _detail = detail;
-        _detailLabel.text = _detail;
-    }
+    _detail = detail;
+    _detailLabel.text = _detail;
 }
 
 - (void)setAmount:(CGFloat)amount {
-    if (_amount != amount) {
-        _amount = amount;
-        _amountLabel.text = [NSString stringWithFormat:@"￥%.2f  ",amount];
-    }
+    _amount = amount;
+    _amountLabel.text = [NSString stringWithFormat:@"￥%.2f  ",amount];
 }
 
 @end
