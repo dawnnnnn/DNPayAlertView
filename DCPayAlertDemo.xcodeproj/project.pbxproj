@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F48411961CB606ED00391999 /* DCPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48411951CB606ED00391999 /* DCPaymentView.m */; };
+		F484119A1CB6138100391999 /* DCPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48411991CB6138100391999 /* DCPaymentView.m */; };
 		F48A81E11C17C5FD007FABA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E01C17C5FD007FABA2 /* main.m */; };
 		F48A81E41C17C5FD007FABA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E31C17C5FD007FABA2 /* AppDelegate.m */; };
 		F48A81E71C17C5FD007FABA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E61C17C5FD007FABA2 /* ViewController.m */; };
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F48411941CB606ED00391999 /* DCPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPaymentView.h; sourceTree = "<group>"; };
-		F48411951CB606ED00391999 /* DCPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPaymentView.m; sourceTree = "<group>"; };
+		F48411981CB6138100391999 /* DCPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPaymentView.h; sourceTree = "<group>"; };
+		F48411991CB6138100391999 /* DCPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPaymentView.m; sourceTree = "<group>"; };
 		F48A81DC1C17C5FD007FABA2 /* DCPayAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCPayAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48A81E01C17C5FD007FABA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F48A81E21C17C5FD007FABA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,14 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F48411931CB606ED00391999 /* DCPaymentAlert */ = {
+		F48411971CB6138100391999 /* DCPaymentAlert */ = {
 			isa = PBXGroup;
 			children = (
-				F48411941CB606ED00391999 /* DCPaymentView.h */,
-				F48411951CB606ED00391999 /* DCPaymentView.m */,
+				F48411981CB6138100391999 /* DCPaymentView.h */,
+				F48411991CB6138100391999 /* DCPaymentView.m */,
 			);
 			path = DCPaymentAlert;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		F48A81D31C17C5FD007FABA2 = {
 			isa = PBXGroup;
@@ -113,7 +113,7 @@
 		F48A81DE1C17C5FD007FABA2 /* DCPayAlertDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F48411931CB606ED00391999 /* DCPaymentAlert */,
+				F48411971CB6138100391999 /* DCPaymentAlert */,
 				F48A81E21C17C5FD007FABA2 /* AppDelegate.h */,
 				F48A81E31C17C5FD007FABA2 /* AppDelegate.m */,
 				F48A81E51C17C5FD007FABA2 /* ViewController.h */,
@@ -285,7 +285,7 @@
 			files = (
 				F48A81E71C17C5FD007FABA2 /* ViewController.m in Sources */,
 				F48A81E41C17C5FD007FABA2 /* AppDelegate.m in Sources */,
-				F48411961CB606ED00391999 /* DCPaymentView.m in Sources */,
+				F484119A1CB6138100391999 /* DCPaymentView.m in Sources */,
 				F48A81E11C17C5FD007FABA2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
