@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface DNPaymentView : UIViewController
 
-@property (nonatomic, copy) NSString *titleStr, *detail;
+@property (nonatomic, strong) NSString *titleStr;
+@property (nonatomic, strong) NSString *detail;
 @property (nonatomic, assign) CGFloat amount;
 
-@property (nonatomic,copy) void (^completeHandle)(NSString *inputPwd);
+@property (nonatomic, copy) void (^completeHandle)(NSString *inputPwd);
 
 - (void)show;
 
 @end
+
+NS_ASSUME_NONNULL_END

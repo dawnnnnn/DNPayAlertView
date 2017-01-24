@@ -84,10 +84,7 @@ static CGFloat kCommonMargin    = 100;
 
 
 - (void)show {
-//    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-//    [keyWindow addSubview:self];
     UIWindow *newWindow = [[UIWindow alloc]initWithFrame:self.view.bounds];
-//    newWindow.backgroundColor = [UIColor clearColor];
     newWindow.rootViewController = self;
     [newWindow makeKeyAndVisible];
     self.showWindow = newWindow;
@@ -104,7 +101,7 @@ static CGFloat kCommonMargin    = 100;
 
 - (void)dismiss {
     [self.pwdTextField resignFirstResponder];
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:.7f animations:^{
         self.paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
         self.paymentAlert.alpha = 0;
         self.showWindow.alpha = 0;
@@ -115,10 +112,10 @@ static CGFloat kCommonMargin    = 100;
     }];
 }
 
+#pragma mark - delegate
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
     if (textField.text.length >= kPasswordCount && string.length) {
-        //输入的字符个数大于6，则无法继续输入，返回NO表示禁止输入
         return NO;
     }
     
@@ -126,25 +123,20 @@ static CGFloat kCommonMargin    = 100;
     if (![predicate evaluateWithObject:string]) {
         return NO;
     }
-    NSString *totalString;
-    if (string.length <= 0) {
-        totalString = [textField.text substringToIndex:textField.text.length-1];
-    }
-    else {
-        totalString = [NSString stringWithFormat:@"%@%@",textField.text,string];
-    }
-    [self setDotWithCount:totalString.length];
-    
-    NSLog(@"_____total %@",totalString);
-    if (totalString.length == 6) {
+
+    return YES;
+}
+
+#pragma mark - action
+
+- (void)textDidChange:(UITextField *)textField {
+    [self setDotWithCount:textField.text.length];
+    if (textField.text.length == 6) {
         if (self.completeHandle) {
-            self.completeHandle(totalString);
+            self.completeHandle(textField.text);
         }
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:.3f];
-        NSLog(@"complete");
     }
-    
-    return YES;
 }
 
 - (void)setDotWithCount:(NSInteger)count {
@@ -157,23 +149,25 @@ static CGFloat kCommonMargin    = 100;
     }
 }
 
-#pragma mark - 
+
+#pragma mark - setter
+
 - (void)setTitleStr:(NSString *)titleStr {
     _titleStr = titleStr;
-    _titleLabel.text = _titleStr;
+    self.titleLabel.text = _titleStr;
 }
 
 - (void)setDetail:(NSString *)detail {
     _detail = detail;
-    _detailLabel.text = _detail;
+    self.detailLabel.text = _detail;
 }
 
 - (void)setAmount:(CGFloat)amount {
     _amount = amount;
-    _amountLabel.text = [NSString stringWithFormat:@"￥%.2f  ",amount];
+    self.amountLabel.text = [NSString stringWithFormat:@"￥%.2f  ",amount];
 }
 
-#pragma mark - Getter
+#pragma mark - getter
 
 - (UIView *)paymentAlert {
     if (_paymentAlert == nil) {
@@ -251,6 +245,7 @@ static CGFloat kCommonMargin    = 100;
         _pwdTextField.hidden = YES;
         _pwdTextField.delegate = self;
         _pwdTextField.keyboardType = UIKeyboardTypeNumberPad;
+        [_pwdTextField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
     return _pwdTextField;
 }
