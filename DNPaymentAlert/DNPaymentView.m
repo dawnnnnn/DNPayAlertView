@@ -49,82 +49,37 @@ static CGFloat kCommonMargin    = 100;
         self.view.frame = [UIScreen mainScreen].bounds;
         self.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3f];
         
-        [self drawView];
+        [self viewAddSubviews];
     }
     return self;
 }
 
-- (void)drawView {
-    if (!_paymentAlert) {
-        _paymentAlert = [[UIView alloc]initWithFrame:CGRectMake(40, [UIScreen mainScreen].bounds.size.height-kKeyboardHeight-kCommonMargin-kAlertHeight, [UIScreen mainScreen].bounds.size.width-80, kAlertHeight)];
-        _paymentAlert.layer.cornerRadius = 5.f;
-        _paymentAlert.layer.masksToBounds = YES;
-        _paymentAlert.backgroundColor = [UIColor colorWithWhite:1. alpha:.95];
-        [self.view addSubview:_paymentAlert];
-        
-        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kPAYMENT_WIDTH, kTitleHeight)];
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.textColor = [UIColor darkGrayColor];
-        _titleLabel.font = [UIFont systemFontOfSize:17];
-        [_paymentAlert addSubview:_titleLabel];
-        
-        _closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_closeBtn setFrame:CGRectMake(0, 0, kTitleHeight, kTitleHeight)];
-        [_closeBtn setTitle:@"╳" forState:UIControlStateNormal];
-        [_closeBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [_closeBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
-        _closeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [_paymentAlert addSubview:_closeBtn];
-        
-        _line = [[UILabel alloc]initWithFrame:CGRectMake(0, kTitleHeight, kPAYMENT_WIDTH, .5f)];
-        _line.backgroundColor = [UIColor lightGrayColor];
-        [_paymentAlert addSubview:_line];
-        
-        _detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, kTitleHeight+15, kPAYMENT_WIDTH-30, 20)];
-        _detailLabel.textAlignment = NSTextAlignmentCenter;
-        _detailLabel.textColor = [UIColor darkGrayColor];
-        _detailLabel.font = [UIFont systemFontOfSize:16];
-        [_paymentAlert addSubview:_detailLabel];
-        
-        _amountLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, kTitleHeight*2, kPAYMENT_WIDTH-30, 25)];
-        _amountLabel.textAlignment = NSTextAlignmentCenter;
-        _amountLabel.textColor = [UIColor darkGrayColor];
-        _amountLabel.font = [UIFont systemFontOfSize:33];
-        [_paymentAlert addSubview:_amountLabel];
-        
-        _inputView = [[UIView alloc]initWithFrame:CGRectMake(15, _paymentAlert.frame.size.height-(kPAYMENT_WIDTH-30)/6-15, kPAYMENT_WIDTH-30, (kPAYMENT_WIDTH-30)/6)];
-        _inputView.backgroundColor = [UIColor whiteColor];
-        _inputView.layer.borderWidth = 1.f;
-        _inputView.layer.borderColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1.].CGColor;
-        [_paymentAlert addSubview:_inputView];
-        
-        
-        _pwdTextField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        _pwdTextField.hidden = YES;
-        _pwdTextField.delegate = self;
-        _pwdTextField.keyboardType = UIKeyboardTypeNumberPad;
-        [_inputView addSubview:_pwdTextField];
-        
-        CGFloat width = _inputView.bounds.size.width/kPasswordCount;
-        for (int i = 0; i < kPasswordCount; i ++) {
-            UILabel *dot = [[UILabel alloc]initWithFrame:CGRectMake((width-kDotWidth)/2.f + i*width, (_inputView.bounds.size.height-kDotWidth)/2.f, kDotWidth, kDotWidth)];
-            dot.backgroundColor = [UIColor blackColor];
-            dot.layer.cornerRadius = kDotWidth/2.;
-            dot.clipsToBounds = YES;
-            dot.hidden = YES;
-            [_inputView addSubview:dot];
-            [self.pwdIndicators addObject:dot];
-            
-                if (i == kPasswordCount-1) {
-                continue;
-            }
-            UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake((i+1)*width, 0, .5f, _inputView.bounds.size.height)];
-            line.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1.];
-            [_inputView addSubview:line];
+- (void)viewAddSubviews {
+    [self.view addSubview:self.paymentAlert];
+    [self.paymentAlert addSubview:self.titleLabel];
+    [self.paymentAlert addSubview:self.closeBtn];
+    [self.paymentAlert addSubview:self.line];
+    [self.paymentAlert addSubview:self.detailLabel];
+    [self.paymentAlert addSubview:self.amountLabel];
+    [self.paymentAlert addSubview:self.inputView];
+    [self.inputView addSubview:self.pwdTextField];
+    
+    CGFloat width = self.inputView.bounds.size.width/kPasswordCount;
+    for (int i = 0; i < kPasswordCount; i ++) {
+        UILabel *dot = [[UILabel alloc]initWithFrame:CGRectMake((width-kDotWidth)/2.f + i*width, (self.inputView.bounds.size.height-kDotWidth)/2.f, kDotWidth, kDotWidth)];
+        dot.backgroundColor = [UIColor blackColor];
+        dot.layer.cornerRadius = kDotWidth/2.;
+        dot.clipsToBounds = YES;
+        dot.hidden = YES;
+        [self.inputView addSubview:dot];
+        [self.pwdIndicators addObject:dot];
+        if (i == kPasswordCount-1) {
+            continue;
         }
+        UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake((i+1)*width, 0, .5f, self.inputView.bounds.size.height)];
+        line.backgroundColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1.];
+        [self.inputView addSubview:line];
     }
-    
-    
 }
 
 
@@ -137,8 +92,8 @@ static CGFloat kCommonMargin    = 100;
     [newWindow makeKeyAndVisible];
     self.showWindow = newWindow;
     
-    _paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
-    _paymentAlert.alpha = 0;
+    self.paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
+    self.paymentAlert.alpha = 0;
 
     [UIView animateWithDuration:.7f delay:0.f usingSpringWithDamping:.7f initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [_pwdTextField becomeFirstResponder];
@@ -148,13 +103,12 @@ static CGFloat kCommonMargin    = 100;
 }
 
 - (void)dismiss {
-    [_pwdTextField resignFirstResponder];
+    [self.pwdTextField resignFirstResponder];
     [UIView animateWithDuration:0.3f animations:^{
-        _paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
-        _paymentAlert.alpha = 0;
+        self.paymentAlert.transform = CGAffineTransformMakeScale(1.21f, 1.21f);
+        self.paymentAlert.alpha = 0;
         self.showWindow.alpha = 0;
     } completion:^(BOOL finished) {
-//            [self removeFromSuperview];
         [self.showWindow removeFromSuperview];
         [self.showWindow resignKeyWindow];
         self.showWindow = nil;
@@ -183,8 +137,8 @@ static CGFloat kCommonMargin    = 100;
     
     NSLog(@"_____total %@",totalString);
     if (totalString.length == 6) {
-        if (_completeHandle) {
-            _completeHandle(totalString);
+        if (self.completeHandle) {
+            self.completeHandle(totalString);
         }
         [self performSelector:@selector(dismiss) withObject:nil afterDelay:.3f];
         NSLog(@"complete");
@@ -220,6 +174,86 @@ static CGFloat kCommonMargin    = 100;
 }
 
 #pragma mark - Getter
+
+- (UIView *)paymentAlert {
+    if (_paymentAlert == nil) {
+        _paymentAlert = [[UIView alloc]initWithFrame:CGRectMake(40, [UIScreen mainScreen].bounds.size.height-kKeyboardHeight-kCommonMargin-kAlertHeight, [UIScreen mainScreen].bounds.size.width-80, kAlertHeight)];
+        _paymentAlert.layer.cornerRadius = 5.f;
+        _paymentAlert.layer.masksToBounds = YES;
+        _paymentAlert.backgroundColor = [UIColor colorWithWhite:1. alpha:.95];
+    }
+    return _paymentAlert;
+}
+
+- (UILabel *)titleLabel {
+    if (_titleLabel == nil) {
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kPAYMENT_WIDTH, kTitleHeight)];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.textColor = [UIColor darkGrayColor];
+        _titleLabel.font = [UIFont systemFontOfSize:17];
+    }
+    return _titleLabel;
+}
+
+- (UIButton *)closeBtn {
+    if (_closeBtn == nil) {
+        _closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_closeBtn setFrame:CGRectMake(0, 0, kTitleHeight, kTitleHeight)];
+        [_closeBtn setTitle:@"╳" forState:UIControlStateNormal];
+        [_closeBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [_closeBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+        _closeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    }
+    return _closeBtn;
+}
+
+- (UILabel *)line {
+    if (_line == nil) {
+        _line = [[UILabel alloc]initWithFrame:CGRectMake(0, kTitleHeight, kPAYMENT_WIDTH, .5f)];
+        _line.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _line;
+}
+
+- (UILabel *)detailLabel {
+    if (_detailLabel == nil) {
+        _detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, kTitleHeight+15, kPAYMENT_WIDTH-30, 20)];
+        _detailLabel.textAlignment = NSTextAlignmentCenter;
+        _detailLabel.textColor = [UIColor darkGrayColor];
+        _detailLabel.font = [UIFont systemFontOfSize:16];
+    }
+    return _detailLabel;
+}
+
+- (UILabel *)amountLabel {
+    if (_amountLabel == nil) {
+        _amountLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, kTitleHeight*2, kPAYMENT_WIDTH-30, 25)];
+        _amountLabel.textAlignment = NSTextAlignmentCenter;
+        _amountLabel.textColor = [UIColor darkGrayColor];
+        _amountLabel.font = [UIFont systemFontOfSize:33];
+    }
+    return _amountLabel;
+}
+
+- (UIView *)inputView {
+    if (_inputView == nil) {
+        _inputView = [[UIView alloc]initWithFrame:CGRectMake(15, _paymentAlert.frame.size.height-(kPAYMENT_WIDTH-30)/6-15, kPAYMENT_WIDTH-30, (kPAYMENT_WIDTH-30)/6)];
+        _inputView.backgroundColor = [UIColor whiteColor];
+        _inputView.layer.borderWidth = 1.f;
+        _inputView.layer.borderColor = [UIColor colorWithRed:.9 green:.9 blue:.9 alpha:1.].CGColor;
+    }
+    return _inputView;
+}
+
+- (UITextField *)pwdTextField {
+    if (_pwdTextField == nil) {
+        _pwdTextField = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        _pwdTextField.hidden = YES;
+        _pwdTextField.delegate = self;
+        _pwdTextField.keyboardType = UIKeyboardTypeNumberPad;
+    }
+    return _pwdTextField;
+}
 
 - (NSMutableArray *)pwdIndicators {
     if (_pwdIndicators == nil) {
