@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  DCPayAlertDemo
+//  DNPayAlertDemo
 //
 //  Created by dawnnnnn on 15/12/9.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "DCPaymentView.h"
+#import "DNPaymentView.h"
 
 @interface ViewController ()
 
@@ -22,7 +22,7 @@
 }
 
 - (IBAction)test:(id)sender {
-    DCPaymentView *payAlert = [[DCPaymentView alloc]init];
+    DNPaymentView *payAlert = [[DNPaymentView alloc]init];
     payAlert.title = @"请输入支付密码";
     payAlert.detail = @"提现";
     payAlert.amount= 10;

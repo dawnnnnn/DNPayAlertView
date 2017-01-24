@@ -1,6 +1,6 @@
 //
-//  DCPayAlertDemoUITests.m
-//  DCPayAlertDemoUITests
+//  DNPayAlertDemoUITests.m
+//  DNPayAlertDemoUITests
 //
 //  Created by dawnnnnn on 15/12/9.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface DCPayAlertDemoUITests : XCTestCase
+@interface DNPayAlertDemoUITests : XCTestCase
 
 @end
 
-@implementation DCPayAlertDemoUITests
+@implementation DNPayAlertDemoUITests
 
 - (void)setUp {
     [super setUp];

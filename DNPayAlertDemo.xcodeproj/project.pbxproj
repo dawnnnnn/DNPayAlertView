@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F484119A1CB6138100391999 /* DCPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48411991CB6138100391999 /* DCPaymentView.m */; };
+		F484119A1CB6138100391999 /* DNPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48411991CB6138100391999 /* DNPaymentView.m */; };
 		F48A81E11C17C5FD007FABA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E01C17C5FD007FABA2 /* main.m */; };
 		F48A81E41C17C5FD007FABA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E31C17C5FD007FABA2 /* AppDelegate.m */; };
 		F48A81E71C17C5FD007FABA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E61C17C5FD007FABA2 /* ViewController.m */; };
 		F48A81EA1C17C5FD007FABA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A81E81C17C5FD007FABA2 /* Main.storyboard */; };
 		F48A81EC1C17C5FD007FABA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48A81EB1C17C5FD007FABA2 /* Assets.xcassets */; };
 		F48A81EF1C17C5FD007FABA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A81ED1C17C5FD007FABA2 /* LaunchScreen.storyboard */; };
-		F48A81FA1C17C5FD007FABA2 /* DCPayAlertDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81F91C17C5FD007FABA2 /* DCPayAlertDemoTests.m */; };
-		F48A82051C17C5FD007FABA2 /* DCPayAlertDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A82041C17C5FD007FABA2 /* DCPayAlertDemoUITests.m */; };
+		F48A81FA1C17C5FD007FABA2 /* DNPayAlertDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81F91C17C5FD007FABA2 /* DNPayAlertDemoTests.m */; };
+		F48A82051C17C5FD007FABA2 /* DNPayAlertDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A82041C17C5FD007FABA2 /* DNPayAlertDemoUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F48411981CB6138100391999 /* DCPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPaymentView.h; sourceTree = "<group>"; };
-		F48411991CB6138100391999 /* DCPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPaymentView.m; sourceTree = "<group>"; };
-		F48A81DC1C17C5FD007FABA2 /* DCPayAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCPayAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48411981CB6138100391999 /* DNPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPaymentView.h; sourceTree = "<group>"; };
+		F48411991CB6138100391999 /* DNPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPaymentView.m; sourceTree = "<group>"; };
+		F48A81DC1C17C5FD007FABA2 /* DNPayAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNPayAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48A81E01C17C5FD007FABA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F48A81E21C17C5FD007FABA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F48A81E31C17C5FD007FABA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,11 +48,11 @@
 		F48A81EB1C17C5FD007FABA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F48A81EE1C17C5FD007FABA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48A81F01C17C5FD007FABA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F48A81F51C17C5FD007FABA2 /* DCPayAlertDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCPayAlertDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F48A81F91C17C5FD007FABA2 /* DCPayAlertDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPayAlertDemoTests.m; sourceTree = "<group>"; };
+		F48A81F51C17C5FD007FABA2 /* DNPayAlertDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNPayAlertDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48A81F91C17C5FD007FABA2 /* DNPayAlertDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNPayAlertDemoTests.m; sourceTree = "<group>"; };
 		F48A81FB1C17C5FD007FABA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F48A82001C17C5FD007FABA2 /* DCPayAlertDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCPayAlertDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F48A82041C17C5FD007FABA2 /* DCPayAlertDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPayAlertDemoUITests.m; sourceTree = "<group>"; };
+		F48A82001C17C5FD007FABA2 /* DNPayAlertDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNPayAlertDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48A82041C17C5FD007FABA2 /* DNPayAlertDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNPayAlertDemoUITests.m; sourceTree = "<group>"; };
 		F48A82061C17C5FD007FABA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,21 +81,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F48411971CB6138100391999 /* DCPaymentAlert */ = {
+		F48411971CB6138100391999 /* DNPaymentAlert */ = {
 			isa = PBXGroup;
 			children = (
-				F48411981CB6138100391999 /* DCPaymentView.h */,
-				F48411991CB6138100391999 /* DCPaymentView.m */,
+				F48411981CB6138100391999 /* DNPaymentView.h */,
+				F48411991CB6138100391999 /* DNPaymentView.m */,
 			);
-			path = DCPaymentAlert;
+			path = DNPaymentAlert;
 			sourceTree = SOURCE_ROOT;
 		};
 		F48A81D31C17C5FD007FABA2 = {
 			isa = PBXGroup;
 			children = (
-				F48A81DE1C17C5FD007FABA2 /* DCPayAlertDemo */,
-				F48A81F81C17C5FD007FABA2 /* DCPayAlertDemoTests */,
-				F48A82031C17C5FD007FABA2 /* DCPayAlertDemoUITests */,
+				F48A81DE1C17C5FD007FABA2 /* DNPayAlertDemo */,
+				F48A81F81C17C5FD007FABA2 /* DNPayAlertDemoTests */,
+				F48A82031C17C5FD007FABA2 /* DNPayAlertDemoUITests */,
 				F48A81DD1C17C5FD007FABA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,17 +103,17 @@
 		F48A81DD1C17C5FD007FABA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F48A81DC1C17C5FD007FABA2 /* DCPayAlertDemo.app */,
-				F48A81F51C17C5FD007FABA2 /* DCPayAlertDemoTests.xctest */,
-				F48A82001C17C5FD007FABA2 /* DCPayAlertDemoUITests.xctest */,
+				F48A81DC1C17C5FD007FABA2 /* DNPayAlertDemo.app */,
+				F48A81F51C17C5FD007FABA2 /* DNPayAlertDemoTests.xctest */,
+				F48A82001C17C5FD007FABA2 /* DNPayAlertDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F48A81DE1C17C5FD007FABA2 /* DCPayAlertDemo */ = {
+		F48A81DE1C17C5FD007FABA2 /* DNPayAlertDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F48411971CB6138100391999 /* DCPaymentAlert */,
+				F48411971CB6138100391999 /* DNPaymentAlert */,
 				F48A81E21C17C5FD007FABA2 /* AppDelegate.h */,
 				F48A81E31C17C5FD007FABA2 /* AppDelegate.m */,
 				F48A81E51C17C5FD007FABA2 /* ViewController.h */,
@@ -124,7 +124,7 @@
 				F48A81F01C17C5FD007FABA2 /* Info.plist */,
 				F48A81DF1C17C5FD007FABA2 /* Supporting Files */,
 			);
-			path = DCPayAlertDemo;
+			path = DNPayAlertDemo;
 			sourceTree = "<group>";
 		};
 		F48A81DF1C17C5FD007FABA2 /* Supporting Files */ = {
@@ -135,30 +135,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F48A81F81C17C5FD007FABA2 /* DCPayAlertDemoTests */ = {
+		F48A81F81C17C5FD007FABA2 /* DNPayAlertDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				F48A81F91C17C5FD007FABA2 /* DCPayAlertDemoTests.m */,
+				F48A81F91C17C5FD007FABA2 /* DNPayAlertDemoTests.m */,
 				F48A81FB1C17C5FD007FABA2 /* Info.plist */,
 			);
-			path = DCPayAlertDemoTests;
+			path = DNPayAlertDemoTests;
 			sourceTree = "<group>";
 		};
-		F48A82031C17C5FD007FABA2 /* DCPayAlertDemoUITests */ = {
+		F48A82031C17C5FD007FABA2 /* DNPayAlertDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F48A82041C17C5FD007FABA2 /* DCPayAlertDemoUITests.m */,
+				F48A82041C17C5FD007FABA2 /* DNPayAlertDemoUITests.m */,
 				F48A82061C17C5FD007FABA2 /* Info.plist */,
 			);
-			path = DCPayAlertDemoUITests;
+			path = DNPayAlertDemoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F48A81DB1C17C5FD007FABA2 /* DCPayAlertDemo */ = {
+		F48A81DB1C17C5FD007FABA2 /* DNPayAlertDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F48A82091C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DCPayAlertDemo" */;
+			buildConfigurationList = F48A82091C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DNPayAlertDemo" */;
 			buildPhases = (
 				F48A81D81C17C5FD007FABA2 /* Sources */,
 				F48A81D91C17C5FD007FABA2 /* Frameworks */,
@@ -168,14 +168,14 @@
 			);
 			dependencies = (
 			);
-			name = DCPayAlertDemo;
+			name = DNPayAlertDemo;
 			productName = DCPayAlertDemo;
-			productReference = F48A81DC1C17C5FD007FABA2 /* DCPayAlertDemo.app */;
+			productReference = F48A81DC1C17C5FD007FABA2 /* DNPayAlertDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F48A81F41C17C5FD007FABA2 /* DCPayAlertDemoTests */ = {
+		F48A81F41C17C5FD007FABA2 /* DNPayAlertDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F48A820C1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DCPayAlertDemoTests" */;
+			buildConfigurationList = F48A820C1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DNPayAlertDemoTests" */;
 			buildPhases = (
 				F48A81F11C17C5FD007FABA2 /* Sources */,
 				F48A81F21C17C5FD007FABA2 /* Frameworks */,
@@ -186,14 +186,14 @@
 			dependencies = (
 				F48A81F71C17C5FD007FABA2 /* PBXTargetDependency */,
 			);
-			name = DCPayAlertDemoTests;
+			name = DNPayAlertDemoTests;
 			productName = DCPayAlertDemoTests;
-			productReference = F48A81F51C17C5FD007FABA2 /* DCPayAlertDemoTests.xctest */;
+			productReference = F48A81F51C17C5FD007FABA2 /* DNPayAlertDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F48A81FF1C17C5FD007FABA2 /* DCPayAlertDemoUITests */ = {
+		F48A81FF1C17C5FD007FABA2 /* DNPayAlertDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F48A820F1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DCPayAlertDemoUITests" */;
+			buildConfigurationList = F48A820F1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DNPayAlertDemoUITests" */;
 			buildPhases = (
 				F48A81FC1C17C5FD007FABA2 /* Sources */,
 				F48A81FD1C17C5FD007FABA2 /* Frameworks */,
@@ -204,9 +204,9 @@
 			dependencies = (
 				F48A82021C17C5FD007FABA2 /* PBXTargetDependency */,
 			);
-			name = DCPayAlertDemoUITests;
+			name = DNPayAlertDemoUITests;
 			productName = DCPayAlertDemoUITests;
-			productReference = F48A82001C17C5FD007FABA2 /* DCPayAlertDemoUITests.xctest */;
+			productReference = F48A82001C17C5FD007FABA2 /* DNPayAlertDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F48A81D71C17C5FD007FABA2 /* Build configuration list for PBXProject "DCPayAlertDemo" */;
+			buildConfigurationList = F48A81D71C17C5FD007FABA2 /* Build configuration list for PBXProject "DNPayAlertDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,9 +244,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F48A81DB1C17C5FD007FABA2 /* DCPayAlertDemo */,
-				F48A81F41C17C5FD007FABA2 /* DCPayAlertDemoTests */,
-				F48A81FF1C17C5FD007FABA2 /* DCPayAlertDemoUITests */,
+				F48A81DB1C17C5FD007FABA2 /* DNPayAlertDemo */,
+				F48A81F41C17C5FD007FABA2 /* DNPayAlertDemoTests */,
+				F48A81FF1C17C5FD007FABA2 /* DNPayAlertDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,7 +285,7 @@
 			files = (
 				F48A81E71C17C5FD007FABA2 /* ViewController.m in Sources */,
 				F48A81E41C17C5FD007FABA2 /* AppDelegate.m in Sources */,
-				F484119A1CB6138100391999 /* DCPaymentView.m in Sources */,
+				F484119A1CB6138100391999 /* DNPaymentView.m in Sources */,
 				F48A81E11C17C5FD007FABA2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F48A81FA1C17C5FD007FABA2 /* DCPayAlertDemoTests.m in Sources */,
+				F48A81FA1C17C5FD007FABA2 /* DNPayAlertDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F48A82051C17C5FD007FABA2 /* DCPayAlertDemoUITests.m in Sources */,
+				F48A82051C17C5FD007FABA2 /* DNPayAlertDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,12 +311,12 @@
 /* Begin PBXTargetDependency section */
 		F48A81F71C17C5FD007FABA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F48A81DB1C17C5FD007FABA2 /* DCPayAlertDemo */;
+			target = F48A81DB1C17C5FD007FABA2 /* DNPayAlertDemo */;
 			targetProxy = F48A81F61C17C5FD007FABA2 /* PBXContainerItemProxy */;
 		};
 		F48A82021C17C5FD007FABA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F48A81DB1C17C5FD007FABA2 /* DCPayAlertDemo */;
+			target = F48A81DB1C17C5FD007FABA2 /* DNPayAlertDemo */;
 			targetProxy = F48A82011C17C5FD007FABA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -425,10 +425,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DCPayAlertDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = DNPayAlertDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCPayAlertDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DNPayAlertDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,10 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DCPayAlertDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = DNPayAlertDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCPayAlertDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DNPayAlertDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -449,11 +449,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DCPayAlertDemoTests/Info.plist;
+				INFOPLIST_FILE = DNPayAlertDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCPayAlertDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DNPayAlertDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCPayAlertDemo.app/DCPayAlertDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNPayAlertDemo.app/DNPayAlertDemo";
 			};
 			name = Debug;
 		};
@@ -461,22 +461,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DCPayAlertDemoTests/Info.plist;
+				INFOPLIST_FILE = DNPayAlertDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCPayAlertDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DNPayAlertDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCPayAlertDemo.app/DCPayAlertDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNPayAlertDemo.app/DNPayAlertDemo";
 			};
 			name = Release;
 		};
 		F48A82101C17C5FD007FABA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DCPayAlertDemoUITests/Info.plist;
+				INFOPLIST_FILE = DNPayAlertDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCPayAlertDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DNPayAlertDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DCPayAlertDemo;
+				TEST_TARGET_NAME = DNPayAlertDemo;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -484,11 +484,11 @@
 		F48A82111C17C5FD007FABA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DCPayAlertDemoUITests/Info.plist;
+				INFOPLIST_FILE = DNPayAlertDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCPayAlertDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DNPayAlertDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DCPayAlertDemo;
+				TEST_TARGET_NAME = DNPayAlertDemo;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F48A81D71C17C5FD007FABA2 /* Build configuration list for PBXProject "DCPayAlertDemo" */ = {
+		F48A81D71C17C5FD007FABA2 /* Build configuration list for PBXProject "DNPayAlertDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48A82071C17C5FD007FABA2 /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F48A82091C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DCPayAlertDemo" */ = {
+		F48A82091C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DNPayAlertDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48A820A1C17C5FD007FABA2 /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F48A820C1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DCPayAlertDemoTests" */ = {
+		F48A820C1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DNPayAlertDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48A820D1C17C5FD007FABA2 /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F48A820F1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DCPayAlertDemoUITests" */ = {
+		F48A820F1C17C5FD007FABA2 /* Build configuration list for PBXNativeTarget "DNPayAlertDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48A82101C17C5FD007FABA2 /* Debug */,

@@ -1,12 +1,12 @@
 //
-//  DCPaymentView.m
-//  DCPayAlertDemo
+//  DNPaymentView.m
+//  DNPayAlertDemo
 //
 //  Created by dawnnnnn on 15/12/9.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
 //
 
-#import "DCPaymentView.h"
+#import "DNPaymentView.h"
 
 #define TITLE_HEIGHT 46
 #define PAYMENT_WIDTH [UIScreen mainScreen].bounds.size.width-80
@@ -17,7 +17,7 @@
 #define ALERT_HEIGHT 200
 
 
-@interface DCPaymentView ()<UITextFieldDelegate>
+@interface DNPaymentView ()<UITextFieldDelegate>
 {
     NSMutableArray *pwdIndicatorArr;
 }
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation DCPaymentView
+@implementation DNPaymentView
 
 - (instancetype)init {
     self = [super init];

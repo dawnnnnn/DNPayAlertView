@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DCPayAlertDemo.xcodeproj">
+      location = "self:/Users/dawnsmac/myGit/DNPayAlertView/DNPayAlertDemo.xcodeproj">
    </FileRef>
 </Workspace>
