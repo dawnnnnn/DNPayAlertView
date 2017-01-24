@@ -12,13 +12,13 @@
 #define kSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define kPAYMENT_WIDTH kSCREEN_WIDTH-80
 
-static NSInteger kPasswordCount = 6;
+static NSInteger const kPasswordCount = 6;
 
-static CGFloat kTitleHeight     = 46.f;
-static CGFloat kDotWidth        = 10;
-static CGFloat kKeyboardHeight  = 216;
-static CGFloat kAlertHeight     = 200;
-static CGFloat kCommonMargin    = 100;
+static CGFloat const kTitleHeight     = 46.f;
+static CGFloat const kDotWidth        = 10;
+static CGFloat const kKeyboardHeight  = 216;
+static CGFloat const kAlertHeight     = 200;
+static CGFloat const kCommonMargin    = 100;
 
 @interface DNPaymentView () <UITextFieldDelegate>
 
