@@ -1,12 +1,12 @@
 //
-//  DNPaymentView.m
+//  DNPayAlertView.m
 //  DNPayAlertDemo
 //
 //  Created by dawnnnnn on 15/12/9.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
 //
 
-#import "DNPaymentView.h"
+#import "DNPayAlertView.h"
 
 #define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define kSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -20,7 +20,7 @@ static CGFloat const kKeyboardHeight  = 216;
 static CGFloat const kAlertHeight     = 200;
 static CGFloat const kCommonMargin    = 100;
 
-@interface DNPaymentView () <UITextFieldDelegate>
+@interface DNPayAlertView () <UITextFieldDelegate>
 
 @property (nonatomic, strong) UIView *paymentAlert;
 @property (nonatomic, strong) UIView *inputView;
@@ -35,13 +35,13 @@ static CGFloat const kCommonMargin    = 100;
 
 @end
 
-@interface DNPaymentView ()
+@interface DNPayAlertView ()
 
 @property (nonatomic, strong) NSMutableArray <UILabel *> *pwdIndicators;
 
 @end
 
-@implementation DNPaymentView
+@implementation DNPayAlertView
 
 - (instancetype)init {
     self = [super init];

@@ -1,5 +1,5 @@
 //
-//  DNPaymentView.h
+//  DNPayAlertView.h
 //  DNPayAlertDemo
 //
 //  Created by dawnnnnn on 15/12/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DNPaymentView : UIViewController
+@interface DNPayAlertView : UIViewController
 
 @property (nonatomic, strong) NSString *titleStr;
 @property (nonatomic, strong) NSString *detail;

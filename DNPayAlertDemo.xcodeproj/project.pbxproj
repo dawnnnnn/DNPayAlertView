@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F484119A1CB6138100391999 /* DNPaymentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48411991CB6138100391999 /* DNPaymentView.m */; };
+		F484119A1CB6138100391999 /* DNPayAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F48411991CB6138100391999 /* DNPayAlertView.m */; };
 		F48A81E11C17C5FD007FABA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E01C17C5FD007FABA2 /* main.m */; };
 		F48A81E41C17C5FD007FABA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E31C17C5FD007FABA2 /* AppDelegate.m */; };
 		F48A81E71C17C5FD007FABA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48A81E61C17C5FD007FABA2 /* ViewController.m */; };
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F48411981CB6138100391999 /* DNPaymentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPaymentView.h; sourceTree = "<group>"; };
-		F48411991CB6138100391999 /* DNPaymentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPaymentView.m; sourceTree = "<group>"; };
+		F48411981CB6138100391999 /* DNPayAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPayAlertView.h; sourceTree = "<group>"; };
+		F48411991CB6138100391999 /* DNPayAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPayAlertView.m; sourceTree = "<group>"; };
 		F48A81DC1C17C5FD007FABA2 /* DNPayAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNPayAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48A81E01C17C5FD007FABA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F48A81E21C17C5FD007FABA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,13 +81,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F48411971CB6138100391999 /* DNPaymentAlert */ = {
+		F48411971CB6138100391999 /* DNPayAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				F48411981CB6138100391999 /* DNPaymentView.h */,
-				F48411991CB6138100391999 /* DNPaymentView.m */,
+				F48411981CB6138100391999 /* DNPayAlertView.h */,
+				F48411991CB6138100391999 /* DNPayAlertView.m */,
 			);
-			path = DNPaymentAlert;
+			path = DNPayAlertView;
 			sourceTree = SOURCE_ROOT;
 		};
 		F48A81D31C17C5FD007FABA2 = {
@@ -113,7 +113,7 @@
 		F48A81DE1C17C5FD007FABA2 /* DNPayAlertDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F48411971CB6138100391999 /* DNPaymentAlert */,
+				F48411971CB6138100391999 /* DNPayAlertView */,
 				F48A81E21C17C5FD007FABA2 /* AppDelegate.h */,
 				F48A81E31C17C5FD007FABA2 /* AppDelegate.m */,
 				F48A81E51C17C5FD007FABA2 /* ViewController.h */,
@@ -285,7 +285,7 @@
 			files = (
 				F48A81E71C17C5FD007FABA2 /* ViewController.m in Sources */,
 				F48A81E41C17C5FD007FABA2 /* AppDelegate.m in Sources */,
-				F484119A1CB6138100391999 /* DNPaymentView.m in Sources */,
+				F484119A1CB6138100391999 /* DNPayAlertView.m in Sources */,
 				F48A81E11C17C5FD007FABA2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
